@@ -1,0 +1,57 @@
+﻿@model List<Portfolio_Core.DataAccessLayer.Entities.Feature>
+
+<section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="https://i.hizliresim.com/jqh3848.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+    <div class="overlay"></div>
+    <div class="shadow-overlay"></div>
+
+    @foreach(var item in Model)
+    {
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>@item.Title</h3>
+
+                <h1>
+                    @item.Description
+                </h1>
+
+                <div class="home-content__buttons">
+                    <a href="#works" class="smoothscroll btn btn--stroke">
+                        SON PROJELERİM
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        HAKKIMDA
+                    </a>
+                </div>
+
+                <div class="home-content__scroll">
+                    <a href="#about" class="scroll-link smoothscroll">
+                        <span>AŞAĞI İN</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    }
+
+    <ul class="home-social">
+        <li>
+            <a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>FACEBOOK</span></a>
+        </li>
+        <li>
+            <a href="#"><i class="im im-twitter" aria-hidden="true"></i><span>TWİTTER</span></a>
+        </li>
+        <li>
+            <a href="#"><i class="im im-instagram" aria-hidden="true"></i><span>İNSTAGRAM</span></a>
+        </li>
+        <li>
+            <a href="#"><i class="im im-behance" aria-hidden="true"></i><span>BEHANCE</span></a>
+        </li>
+        <li>
+            <a href="#"><i class="im im-pinterest" aria-hidden="true"></i><span>PİNTEREST</span></a>
+        </li>
+    </ul>
+</section>

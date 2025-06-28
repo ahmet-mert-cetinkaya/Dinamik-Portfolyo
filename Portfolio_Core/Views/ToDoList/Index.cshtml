@@ -1,0 +1,64 @@
+﻿@model List<ToDoList>
+
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Layout/Index.cshtml";
+	int count = 0;
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">YAPILACAKLAR</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">YAPILACAKLAR LİSTESİ</div>
+					</div>
+					<div class="card-body">
+						<div class="card-sub">
+							"YAPILACAKLAR İLE İLGİLİ İŞLEMLERİ AŞAĞIDAKİ PANELDEN GERÇEKLEŞTİREBİLİRSİNİZ. :
+						</div>
+						<table class="table mt-3">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">İÇERİK</th>
+									<th scope="col">TARİH</th>
+									<th scope="col">DURUM</th>
+									<th scope="col">SİL</th>
+									<th scope="col">GÜNCELLE</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var item in Model)
+								{
+									count++;
+									<tr>
+										<td>@count</td>
+										<td>@item.Title</td>
+										<td>@item.Date</td>
+										@if (item.Status == true)
+										{
+											<td><a href="/ToDoList/ChangeToDoListStatusToFalse/@item.ToDoListID" class="btn btn-dark">YAPILMADI OLARAK İŞARETLE</a></td>
+										}
+										else
+										{
+											<td><a href="/ToDoList/ChangeToDoListStatusToTrue/@item.ToDoListID" class="btn btn-info">YAPILDI OLARAK İŞARETLE</a></td>
+										}
+										<td><a href="/ToDoList/DeleteToDoList/@item.ToDoListID" class="btn btn-danger">SİL</a></td>
+										<td><a href="/ToDoList/UpdateToDoList/@item.ToDoListID" class="btn btn-success">GÜNCELLE</a></td>
+									</tr>
+								}
+							</tbody>
+						</table>
+						<td><a href="/ToDoList/CreateToDoList/" class="btn btn-primary">YENİ YAPILACAK İŞLEM GİRİŞİ</a></td>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
