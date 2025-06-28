@@ -19,7 +19,7 @@ Projede yapılacak işler takibi, içerik yönetimi gibi özellikler modern ve k
 
 ## 🖼️ Ekran Görüntüleri
 
-| Ana Sayfa | To-Do Listesi | Admin Paneli |
+| Ana Sayfa | Hakkımda | Admin Paneli |
 |:---------:|:-------------:|:------------:|
 | ![Ana Sayfa](ss/anasayfa.png) | ![Hakkımda](ss/hakkimda.png) | ![Admin Panel](ss/admin-paneli.png) |
 
