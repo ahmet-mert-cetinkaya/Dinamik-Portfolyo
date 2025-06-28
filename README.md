@@ -34,4 +34,4 @@ Projede yapılacak işler takibi, içerik yönetimi gibi özellikler modern ve k
 - C#  
 - Razor View Engine
 
-- ## 🙏 Teşekkürler
+## 🙏 Teşekkürler
